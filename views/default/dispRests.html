@@ -1,0 +1,96 @@
+{{extend 'layout.html'}}
+<style type="text/css">
+ #wat {
+     background:#ffffcc ;
+ }
+    #p {
+    border-style: solid;
+        	margin-bottom: .6cm;
+            	padding-bottom: .3cm;
+                padding-top: .3cm;
+    
+} 
+</style>
+<body id="wat">
+     <div class="row"  >
+
+     . <div class="col-md-3">
+         <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Need Suport ?</div>
+  <div class="panel-body" id ="wat">
+   
+             </div>
+         <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item" id="wat">Customer Care :</li>
+    <li class="list-group-item" id="wat">9090909090</li>
+    <li class="list-group-item" id="wat">Or you can also email</li>
+    <li class="list-group-item" id="wat">support@foodBasket.com</li>
+  </ul></div>
+         
+         
+         <br><br></div>
+              
+         
+         
+         
+         
+         <div class="col-md-7">
+        {{if (lengthVar != 0):}}
+        {{for item in records:}}
+            <div class="row" id="p"  >
+                <div class="col-md-4" >
+                     <img src="{{=URL('download',args=item.hotelImage)}}" height="150px" width="150px"align= "left"/></ul>
+                     <br>
+
+                    <br><br>
+               </div>
+               <div class="col-md-6">
+         
+         
+               <div> 
+                   
+                    <h3>
+                        
+                        {{=A(item.rname,_style="color:#9999ff;",_href=URL('dispMenu',vars={'rname':item.rname}))}}</h3>
+                       <h4>{{=item.info}}</h4>  
+                   <h5>
+                       <div class="rating">
+                           {{for rat in range(1,6):}}
+                               {{if(round(item.rating) >= rat):}}
+                                       <span>★</span>
+                               {{else:}}
+                                       <span>☆</span>
+                               {{pass}}
+                           {{pass}}
+                           
+</div>
+                       Rating : {{=item.rating}}</h6>
+    
+                       <h5>
+                           
+                           {{=item.locality.title()}}</h6>
+        
+            
+   
+                    <br>
+
+
+                    
+                </div>
+            
+              </div>
+                  <div class="col-md-2"><div class="btn-group" role="group" aria-label="...">
+                    {{=A(XML('<button type="button" class="btn btn-danger">Go to Menu</button>'),_href=URL('dispMenu',vars={'rname':item.rname}))}}</div></div>
+             </div> 
+               {{pass}}
+{{else:}}
+             <p>
+                 Probably you would like to search from following options
+         </p>   
+             {{for item in suggest:}}<li>{{=item.locality}}</li>{{pass}}
+            {{pass}} 
+         </div>
+         </div>
+         </body>

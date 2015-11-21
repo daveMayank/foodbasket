@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+
+    <div class="row">
+    <div class="col-md-2">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+            <div class="panel-body">
+                <a href="{{=URL('default','add_restau')}}" ><div class="glyphicon glyphicon-plus-sign"></div> Add Restaurant</a>
+            </div>
+        </div>
+    </div>
+
+<ul>
+    {{for item in records:}}<li>{{=A(item.rname,_href=URL('editMenu', vars={'restid':item.id}))}}<a href="{{=URL('default','remove_restau',vars={'restid':item.id})}}"><button type="button" class="btn btn-danger">Remove </button></a></li>{{pass}}
+</ul>
+</div>

@@ -1,0 +1,153 @@
+{{extend 'layout.html'}}
+
+<style type="text/css">
+#front
+{
+
+    background:URL(../static/img.jpg);
+    background-repeat: no-repeat;
+    background-size: 1300px 800px;
+    opacity: 0.8;
+    background-position: top;
+}
+     @keyframes example {
+    0%   {background-color: black; left:0px; top:0px;}
+    25%  {background-color: yellow; left:200px; top:0px;}
+    
+    100% {background-color: red; left:0px; top:0px;}
+}
+    @keyframes example1 {
+    0%   {background-color:#800000; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+   
+   }
+}
+#back
+{
+    height:50%;
+    width:100%;
+    
+        background: #6699FF;
+    background-clip: content-box;
+    
+    background-repeat: no-repeat;
+
+}    
+    #bgcolor{background-color: #b0c4de;}
+    #inter
+    {
+              position: relative;
+    background-color: #33FF00;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+
+    }
+    #inter1
+    {
+              position: relative;
+    background-color: #787878 ;
+    animation-name: example1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    }
+</style>
+<div class="jumbotron">
+    <div id="inter">
+        
+    
+  <h1 align="center">Welcome to Foodbasket!!enjoyy..</h1>
+</div></div>
+    
+    
+<div id="front" >
+   <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+</div>
+<div id="back" >
+    
+<div class="list-group">
+  <p class="list-group-item list-group-item-danger" align="center"><b> SPECIAL OFFERS AND DISCOUNTS..HURRYUP!!</b></p>
+    <a href="#" class="list-group-item list-group-item-success">Hyderabadi Biryani   <b> &nbsp &nbsp &nbsp &nbsp CAFE BAHAR</b></a>
+  <a href="#" class="list-group-item list-group-item-info">Malai Korma     <b>  &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp  &nbsp &nbsp&nbspBAWARCHI</b></a>
+    <a href="#" class="list-group-item list-group-item-warning"> Murgh do Pyaza      <b> &nbsp &nbsp &nbsp  &nbsp&nbsp &nbsp &nbspMANPASAND</b></a>
+    <a href="#" class="list-group-item list-group-item-danger">Hyderabadi Khichdi        <b> &nbsp &nbsp &nbsp &nbspPARADISE</b></a>
+</div>
+   <div class="jumbotron">
+       <div id="inter1">
+  <p align="center">Want to Taste just signup and order</p>
+       
+       </div></div>
+    <div class="row" style="color:#0000FF">
+        <div id="bgcolor">
+            
+      
+  <div class="col-xs-500 col-md-3"style="color:red">
+      <div style="bgcolor:#0000FF">
+          
+    
+    <a href="#" class="thumbnail">At foodpanda India, we have something to suit every budget. From daily deals to free delivery from your favorite restaurants, we’ve got it all. Watch out for amazing deals and discounts every month. Stay updated with our latest events and news by signing up for our city specific newsletter. Get discount on your pizza delivery from Domino’s Bangalore and enjoy it with your family. 
+        <br> <br> 
+    </a>  </div>
+  </div>
+  <div class="col-xs-500 col-md-4 "  >
+    <a href="#" class="thumbnail"style="color:red">
+Smooth and Easy 4 step ordering process, easy payment, available 24/7
+
+
+
+   <p>
+       
+       ✓ 24/7: Our site and app is available 24/7 with the feature to pre-order. You can plan your meal ahead from the best restaurant near you and avoid the rush hours.</p>
+        <p>✓ Free to use: Browse through 1000+ restaurant menus for free</p>
+    <p>
+        
+        ✓ Order food in 4 simple steps</p>
+    <p>
+        
+        ✓ Easy Payment: Do you prefer online payment? We accept all major credit cards as well as PayTM Wallet. If you prefer to pay cash on delivery in Indian Rupees, we’ve got that covered too. </p>
+
+
+        
+    </a>
+  </div>  </div>
+  <div class="col-xs-500 col-md-4"style="color:brown">
+    <a href="#" class="thumbnail"style="color:brown">
+        The most convenient food delivery service is not only for the hungry days but also to spend more time with your loved ones. Celebrate birthdays, anniversaries or any auspicious occasion with your friends and family by ordering food online from foodpanda. Online cake delivery for birthdays or wedding cakes, the finest bakeries near you will drop it off right at your doorstep. Sweets are integral part of any Indian celebration, find desserts in Delhi, Bangalore and many other cities which deliver to you. Order authentic Indian desserts such as Halwa, Gulab Jamun or Kheer from famous places in your neighbourhood. Chaintanya Paranthas in Pune, Sholay (Powai) in Mumbai, Apni Rasoi in Delhi or Apni Rasoi (South City 2)Gurgaon are some of our all-time favorite dessert destinations. 
+        
+    </a>
+  </div>
+  ...
+</div>
+     <div class="row">
+          
+  <div class="col-xs-500 col-md-3"style="bgcolor:black">
+    <a href="#" class="thumbnail">
+          <img src="../static/i.jpeg" alt="right">
+         <img src="../static/i.jpeg" alt="right">
+
+
+         
+    </a>
+  </div>
+  ... <div class="col-xs-500 col-md-4">
+    <a href="#" class="thumbnail"style="color:black">
+   <img src="../static/im.jpg" alt="right">
+         
+    </a>
+  </div><div class="col-xs-500 col-md-4">
+    <a href="#" class="thumbnail"style="color:green">
+         <img src="../static/k.jpg" alt="right">
+         
+        
+    </a>
+  </div>
+  
+
+    
+    
+    
+</div>   
+    
+</div>
+

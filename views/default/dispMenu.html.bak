@@ -1,0 +1,172 @@
+{{extend 'layout.html'}}
+<style type="text/css">
+#front
+{
+
+   height:20%;
+    width:50%;
+    margin-left:70%;
+
+        background: #6699FF;
+    background-clip: content-box;
+
+    background-repeat: no-repeat;
+}
+    #wat {
+     background:#ffffcc ;
+ }
+     @keyframes example {
+    0%   {background-color: black; left:0px; top:0px;}
+    25%  {background-color: yellow; left:200px; top:0px;}
+
+    100% {background-color: red; left:0px; top:0px;}
+}
+    @keyframes example1 {
+    0%   {background-color:#800000; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+
+   }
+
+#back
+{
+    height:50%;
+    width:100%;
+
+        background: #c2d1f0;
+    background-clip: content-box;
+
+    background-repeat: no-repeat;
+
+}
+    #bgcolor{background-color: #b0c4de;}
+    #inter
+    {
+              position: relative;
+    background-color: #33FF00;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+
+    }
+    #watermark {
+  color: #d0d0d0;
+  font-size: 100pt;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(45deg);
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  margin: 10;
+  z-index: -1;
+  left:100px;
+  top:100px;
+    }
+    #inter1
+    {
+              position: relative;
+    background-color: #787878 ;
+    animation-name: example1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    }
+</style>
+
+<body id="back">
+
+
+
+
+
+
+    <div class="row">
+
+  ... <div class="col-md-3">
+<div class="panel panel-default" >
+  <!-- Default panel contents -->
+  <div class="panel-heading">Quick Info</div>
+  <div class="panel-body" id="wat">
+  </div>
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item" id="wat">Customer Care :</li>
+    <li class="list-group-item" id="wat">9090909090</li>
+    <li class="list-group-item" id="wat">Or you can also email</li>
+    <li class="list-group-item" id="wat">support@foodBasket.com</li>
+  </ul>
+</div>        
+
+  </div>
+    <div class="col-md-6"style="bgcolor:black">
+        <div class="panel panel-default">
+  <div class="panel-heading">Restaurant Menu</div>
+         <div class="panel-body" style="background:#ccf2ff">
+
+    <p >{{for i in categories:}}
+    <div>
+        <h3>{{=i.category}}</h3>
+        <table width="100%">
+    {{for j in records:}}
+    
+        {{if (j.category == i.category):}} 
+            <div>
+                
+                 <tr>   
+                <td>{{response.write(j.iname)}}</td>
+                
+                <td ><div align="right">
+                    
+                    Rs. {{response.write(j.cost_item)}}
+                <a  href="#" onclick="ajax('{{=URL('default','addCart',vars=dict(itemid=j.id,actAs='add', itemName=j.iname, itemPrice=j.cost_item))}}',[],'orderTracker')" >
+                <div class="glyphicon glyphicon-plus-sign"></div></a>
+                   
+                    </div>  
+                 </td>
+                </tr>
+                
+                
+            </div>
+        
+        {{pass}}
+    
+    {{pass}}
+            </table>
+    </div>{{pass}}
+</p>
+        
+        </div>
+</div>
+        </div>
+
+
+
+  <div class="col-md-3">
+        <a class="thumbnail" style="color:green">  <div id='orderTracker'>
+      <div class="glyphicon glyphicon-shopping-cart"></div>  Your order
+    <ul>
+        <li><div class="glyphicon glyphicon-send"></div> Min. delivery 100</li>
+        <li><div class="glyphicon glyphicon-bitcoin"></div> Uses Cash on Delivery</li>
+</ul>
+    </div>
+{{=A('Proceed To Checkout',_href=URL('dispOrder'))}}</a>
+
+
+
+
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div id="watermark">
+    FOODBASKET....</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>

@@ -1,0 +1,9 @@
+{{extend 'layout.html'}}
+<h3>Any pending requests for Restaurants are shown below</h3>
+<table>
+    
+
+    {{for item in records:}}<tr><td>{{=item.id}}</td><td><a href="{{=URL('default','approve_restau',vars={'restid':item.id})}}"><button type="button" class="btn btn-danger">Approve </button></a></td></tr>{{pass}}
+</table>
+<br><br><br>
+<a href="http://127.0.0.1:8000/admin/default/design/FoodBasket_DB">Click to Open main site interface</a>

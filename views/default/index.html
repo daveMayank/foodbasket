@@ -1,0 +1,137 @@
+{{extend 'layout.html'}}
+<style type="text/css">
+
+    
+    
+    
+   
+     @keyframes example {
+    0%   {background-color: black; left:0px; top:0px;}
+    25%  {background-color: yellow; left:200px; top:0px;}
+    
+    100% {background-color: red; left:0px; top:0px;}
+}
+    @keyframes example1 {
+    0%   {background-color:#800000; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+   
+   }
+}
+    #back
+{
+    height:50%;
+    width:100%;
+    
+        background: #6699FF;
+    background-clip: content-box;
+    
+    background-repeat: no-repeat;
+
+}    
+ #bgcolor{background-color: #b0c4de;}
+ 
+    #inter1
+    {
+              position: relative;
+    background-color: #787878 ;
+    animation-name: example1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    }   
+</style>
+<div class="jumbotron" style="padding-bottom:4px;padding-top:4px;">
+    <div id="inter">
+    <h3 align="center">Welcome to Foodbasket!!</h3>
+    <h4 align="center">Fresh, Tasty and Fast!</h4>
+    </div>
+</div>
+
+
+<div> 
+   <script type="text/javascript">
+var image1 = new Image()
+image1.src = "../static/img.jpg"
+var image2 = new Image()
+image2.src = "../static/im.jpg"
+</script>
+
+<p align="center"><img src="../static/img.jpg" width="700" height="400" name="slide" /></p>
+<script type="text/javascript">
+        var step=1;
+        function slideit()
+        {
+            document.images.slide.src = eval("image"+step+".src");
+            if(step<2)
+                step++;
+            else
+                step=1;
+            setTimeout("slideit()",2000);
+        }
+        slideit();
+</script> 
+
+   
+</div>
+<div id="back" >
+
+   <div class="jumbotron">
+       <div id="inter1">
+  <p align="center">Want to Taste just signup and order</p>
+       
+       </div></div>
+    <div class="row" style="color:#0000FF">
+        <div id="bgcolor">
+            
+      
+  <div class="col-xs-500 col-md-3"style="color:red">
+      <div style="bgcolor:#0000FF">
+          
+    
+    <a href="#" class="thumbnail">At FoodBasket India, we have something to suit every budget. Stay updated with our latest events and news by signing up for our city specific newsletter. 
+        <br> <br> 
+    </a>  </div>
+  </div>
+  <div class="col-xs-500 col-md-4 "  >
+    <a href="#" class="thumbnail">
+    There is one inexhaustible aspect of everyday life that never dulls, namely the simple pleasure of eating and drinking. - Amndre Domine
+      </a>
+  </div>  </div>
+  <div class="col-xs-500 col-md-4"style="color:brown">
+    <a href="#" class="thumbnail">
+        The most convenient food delivery service is not only for the hungry days but also to spend more time with your loved ones. Celebrate birthdays, anniversaries or any auspicious occasion with your friends and family by ordering food online from foodpanda. 
+    </a>
+  </div>
+  ...
+</div>
+     <div class="row">
+          
+  <div class="col-xs-500 col-md-3"style="bgcolor:black">
+    <a href="#" class="thumbnail">
+          <img src="../static/i.jpeg" alt="right">
+         <img src="../static/i.jpeg" alt="right">
+
+
+         
+    </a>
+  </div>
+  ... <div class="col-xs-500 col-md-4">
+    <a href="#" class="thumbnail"style="color:black">
+   <img src="../static/im.jpg" alt="right">
+         
+    </a>
+  </div><div class="col-xs-500 col-md-4">
+    <a href="#" class="thumbnail"style="color:green">
+         <img src="../static/k.jpg" alt="right"height="550" width="450">
+         
+        <br><br>
+    </a>
+  </div>
+  
+
+    
+    
+    
+</div>   
+    
+</div>
